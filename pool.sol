@@ -1,20 +1,32 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
-
+pragma solidity ^0.8.23;
+//10k token transfer. Start approvals.
 import {ERC4626} from "@openzeppelin/contracts/token/ERC20/extensions/ERC4626.sol";
 import {IERC20, IERC20Metadata, ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract Pool is ERC4626 {
+import "./plugin.sol";
+contract Pool is ERC4626, Plugin {
 
     ERC20 _asset;
     address perp;
     address owner;
     uint dec = 10**18;
-    constructor(ERC20 asset) ERC4626(asset) ERC20("zDAY", "zDAY") {
+ 
+    constructor(ERC20 asset, IERC20Plugins token) ERC4626(asset) ERC20("zDAY", "zDAY") Plugin(token){
         _asset = asset;
         perp = msg.sender;
         asset.approve(msg.sender, type(uint256).max);
         owner = msg.sender;
+    }
+
+    function _updateBalances(address from, address to, uint256 amount) internal override {
+        if (from == address(0)) {
+            _mint(to, amount);
+        } else if (to == address(0)) {
+            _burn(from, amount);
+        } else {
+            _transfer(from, to, amount);
+        }
     }
 
     modifier onlyOwner {
