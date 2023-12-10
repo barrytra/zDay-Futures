@@ -37,8 +37,12 @@ Learnt about 1inch, yield farming.
 We were able to make our dapp running with all the main features. Users can now be saved from daily inflation rate and can protect their money.
 ## What we learned
 Through this hackathon, we were able to learn about various functionalities that chainlink/1inch/graph and other sponsor provides and how to integrate them with our dapp. 
-## What's next for dVest
+## What's next for zDay
 1) To integrate other crypto coins so that user can bet on them as well.
 2) Improving the UI/UX.
 3) To be able to open the position for n-days.
 
+## zkEVM
+contract address of token.sol - 0xeD0116c634C982D1214456E0e3371888d8418702
+contract address of pool.sol - 0xe0Cc91E84684A67Bf6fa395D836D1f6d64f0Cc1B
+contract address of zDay.sol - 0x2d9c5920F84D61BF106DD9D6Ea841588b24c72d1
