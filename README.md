@@ -16,6 +16,9 @@ Zero day futures onboards next billion web2 users into web3 trading. Open your p
 ## Flow of the dapp
 https://github.com/barrytra/zDay-Futures/blob/main/diagg.jpg
 
+Token.sol - USDc(ERC20) tokens that are present in the pool.
+Pool.sol - Contract where liquidity providers can deposit their USDc into pool.
+zDay.sol - Main contract logic which opens the position, close the position, increase collateral, increase size.
 
 ## How we built it
 Fronted was built using Reactjs. Smart contracts were written in solidity. Chainlink helps us to use price feeds to fetch prices of ETH and use automation tool to automatically close the position after 24 hrs. Graph helps us to deploy a new subgraph and retrieve data from it.
