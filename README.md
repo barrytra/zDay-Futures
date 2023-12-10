@@ -20,8 +20,7 @@ https://github.com/barrytra/zDay-Futures/blob/main/diagg.jpg
 ## How we built it
 Fronted was built using Reactjs. Smart contracts were written in solidity. Chainlink helps us to use price feeds to fetch prices of ETH and use automation tool to automatically close the position after 24 hrs. Graph helps us to deploy a new subgraph and retrieve data from it.
 ## Contracts structure
-![WhatsApp Image 2023-06-10 at 4 09 48 AM](https://github.com/barrytra/chainlink_spring_2023/assets/109822630/5bb752c7-e5fe-4285-8c04-e8fd4b59ce5d)
-
+https://github.com/barrytra/zDay-Futures/blob/main/diagg.jpg
 
 ## Challenges we ran into
 Had to explore and learn how to automatically call the functions in solidity, without using user intervention. Chainlink automation tool helped in achieving that. 
